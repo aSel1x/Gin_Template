@@ -1,4 +1,4 @@
-module github.com/username/Gin_Template
+module github.com/aSel1x/Gin_Template
 
 go 1.23.1
 
