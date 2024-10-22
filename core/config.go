@@ -11,10 +11,7 @@ type Config struct {
 }
 
 type AppConfig struct {
-	Path    string
-	Name    string
-	Secret  string
-	Version string
+	Secret string
 }
 
 type PostgresConfig struct {
@@ -32,10 +29,7 @@ func (p *PostgresConfig) DSN() string {
 func NewConfig() (*Config, error) {
 
 	appConfig := AppConfig{
-		Path:    os.Getenv("APP_PATH"),
-		Name:    os.Getenv("APP_NAME"),
-		Secret:  os.Getenv("APP_SECRET_KEY"),
-		Version: os.Getenv("APP_VERSION"),
+		Secret: os.Getenv("APP_SECRET_KEY"),
 	}
 
 	postgresConfig := PostgresConfig{
